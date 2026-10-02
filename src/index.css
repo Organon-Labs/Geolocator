@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #070b12;
+    color: #94a3b8;
+    overflow: hidden;
+  }
+}
+
+/* Custom Tactical Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #060a11;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9;
+}
+
+/* Tactical Scanning Line Animation */
+.scanning-line {
+  height: 2px;
+  background: linear-gradient(to right, transparent, #22d3ee, #38bdf8, transparent);
+  box-shadow: 0 0 12px #22d3ee;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  animation: scan 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  z-index: 25;
+}
+
+@keyframes scan {
+  0% {
+    top: 0;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.8;
+  }
+}
+
+/* Leaflet Container Overrides */
+.leaflet-container {
+  background: #050810 !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+.tactical-observer-icon {
+  background: transparent;
+  border: none;
+}
+
+.osm-element-marker {
+  background: transparent;
+  border: none;
+}

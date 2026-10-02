@@ -1,0 +1,6 @@
+{
+  "name": "GeoLens 3D",
+  "description": "Tactical OSINT & Computer Vision platform for geospatial image deduction, satellite frustum projection, and ground truth verification.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
